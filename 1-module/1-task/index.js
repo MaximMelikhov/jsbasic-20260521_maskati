@@ -1,4 +1,3 @@
-function factorial(n) {
   function factorial(n) {
     let result = 1;
     for (let i = 1; i <= n; i++) {
@@ -8,4 +7,4 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
-}
+
