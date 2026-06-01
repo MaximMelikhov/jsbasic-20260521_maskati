@@ -63,25 +63,9 @@ module.exports = function(config) {
     autoWatch: true,
 
 
-    // Настройка кастомного лончера для Chrome с флагами стабильности в CI
-    customLaunchers: {
-      ChromeHeadlessCI: {
-        base: 'ChromeHeadless',
-        flags: [
-          '--no-sandbox', 
-          '--disable-setuid-sandbox', 
-          '--disable-dev-shm-usage'
-        ]
-      }
-    },
-
-    // Используем созданный кастомный лончер вместо стандартного
-    browsers: ['ChromeHeadlessCI'],
-
-    // Увеличиваем таймауты ожидания браузера (в миллисекундах)
-    browserNoActivityTimeout: 60000,
-    browserDisconnectTimeout: 10000,
-    pingTimeout: 10000,
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['ChromeHeadless'],
 
 
     // Continuous Integration mode
@@ -93,4 +77,3 @@ module.exports = function(config) {
     concurrency: Infinity
   });
 }
-
